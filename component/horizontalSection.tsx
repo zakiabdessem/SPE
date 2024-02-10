@@ -31,7 +31,7 @@ const HorizontalSection: React.FC = () => {
     ScrollTrigger.create({
       trigger: ".racesWrapper",
       start: "top 30%",
-      end: () => `+=${getScrollAmount() * -1}`,
+      end: () => `+=${getScrollAmount() * -1}`, //
       pin: true,
       animation: tween,
       scrub: 1,
