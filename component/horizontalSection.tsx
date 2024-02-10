@@ -35,7 +35,7 @@ const HorizontalSection: React.FC = () => {
       pin: true,
       animation: tween,
       scrub: 1,
-      markers: true,
+      markers: false,
     });
 
     // Cleanup function to kill animations and ScrollTriggers on component unmount
@@ -52,7 +52,7 @@ const HorizontalSection: React.FC = () => {
         <div className="racesWrapper">
           <div className="races">
             <h2 className="pl-4">
-              WeAre
+              #WeAre
               <span
                 style={{
                   color: "var(--color-primary)",
