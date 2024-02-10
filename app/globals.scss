@@ -1,0 +1,269 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Montserrat:wght@300;400;700;900&display=swap");
+
+/* General site settings Starting */
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+html,
+body,
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button {
+  border: none;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+figure {
+  margin: 0;
+}
+
+i,
+img {
+  user-select: none;
+  pointer-events: none;
+}
+
+/* General site settings End */
+
+:root {
+  /* Colors */
+  --color-primary: #0a3e83;
+  --color-secondary: #b9c4ca;
+  --color-border: rgb(42, 45, 51);
+  --color-dark: rgb(23, 25, 30);
+  --color-btn-dark: rgb(27, 30, 36);
+  --color-btn-light: rgb(33, 36, 44);
+  --color-text-dark: rgb(140, 141, 143);
+  --color-text-hover: rgb(203, 203, 204);
+  --color-text-light: rgb(252, 252, 252);
+  --color-linear-1: linear-gradient(
+    to left,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+  --color-linear-1-2: linear-gradient(
+    to right,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+  --color-linear-2: linear-gradient(
+    199deg,
+    var(--color-primary) -100%,
+    var(--color-btn-dark) 100%,
+    var(--color-primary) 50%
+  );
+  --color-linear-3: linear-gradient(
+    to left,
+    var(--color-text-light),
+    var(--color-text-hover)
+  );
+  --color-linear-4: linear-gradient(
+      90deg,
+      #ffa114,
+      #8d35fc 35.94%,
+      #35f0fc 70.31%,
+      #ffa114
+    )
+    no-repeat;
+  /* Font weights */
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
+  /* Font families */
+  --font-family-1: "Lato", sans-serif;
+  --font-family-2: "Montserrat", sans-serif;
+  /* FeedbacksSlider Settings */
+  --slide-card-count: 77;
+  --slide-scroll-duration: 231s;
+  --slide-height: 16rem;
+  --slide-card-height: 16rem;
+  --slide-width: 45rem;
+  --slide-card-width: 45rem;
+}
+
+/* Scrollbar Starting */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-btn-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    0deg,
+    var(--color-btn-dark) 0%,
+    var(--color-secondary) 50%,
+    var(--color-btn-dark) 100%
+  );
+  -webkit-border-radius: 50px;
+  -webkit-box-shadow: 0 2px 5px var(--color-dark);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    0deg,
+    var(--color-btn-dark) 0%,
+    var(--color-primary) 50%,
+    var(--color-btn-dark) 100%
+  );
+}
+
+/* Scrollbar End */
+
+.page-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 33%;
+  z-index: -10;
+  mix-blend-mode: luminosity;
+  overflow: hidden;
+  background-image: url("/assets/images/bg-3.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
+}
+
+.page-background-1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 25%;
+  z-index: -8;
+  mix-blend-mode: luminosity;
+  overflow: hidden;
+  background-image: url("/assets/images/bg-1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
+}
+
+body {
+  font-family: var(--font-family-1);
+  font-weight: var(--font-weight-normal);
+  font-size: 1.6rem;
+  line-height: 1.5;
+  background-color: var(--color-dark);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-2);
+  font-weight: var(--font-weight-bold);
+}
+
+p,
+a {
+  font-family: var(--font-family-1);
+  font-weight: var(--font-weight-normal);
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+section {
+  display: block;
+  .container {
+    max-width: 1670px; /* here ----------------------------------- */
+    margin: 0 auto;
+    padding: 0 4rem;
+  }
+  div {
+    display: block;
+  }
+}
+
+/*  834px - 1068px - Laptop Fonts */
+@media screen and (min-width: 834px) and (max-width: 1068px) {
+  body {
+    font-size: 1.4rem;
+  }
+}
+
+/*  576px - 833px - Tablet Fonts */
+@media screen and (min-width: 576px) and (max-width: 833px) {
+  body {
+    font-size: 1.1rem;
+  }
+}
+
+/*  575px and Lower - Mobile Fonts */
+@media screen and (max-width: 575px) {
+  body {
+    font-size: 0.8rem;
+  }
+}
+
+@keyframes BlinkingWhiteShadow {
+  0% {
+    text-shadow: 0 0 12px var(--color-text-light);
+  }
+  50% {
+    text-shadow: 0 0 2px var(--color-text-light);
+  }
+  100% {
+    text-shadow: 0 0 12px var(--color-text-light);
+  }
+}
+
+@keyframes FloatingHeroImage {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-1rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

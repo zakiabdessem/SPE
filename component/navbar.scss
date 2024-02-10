@@ -1,0 +1,212 @@
+/* 1069px and Upper - Desktop Header */
+.header {
+  z-index: 99;
+  height: 14rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .navigation {
+    z-index: 100;
+    height: 9rem;
+    width: 106rem;
+    border-radius: 50px;
+    padding: 0 2.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    /*  background-color: var(--color-btn-dark);
+    box-shadow: 0 0 75px rgb(0, 0, 0); mybe add it later   */
+    .logo {
+      height: 8rem;
+      width: auto;
+      display: flex;
+    }
+
+    .navbar {
+      display: flex;
+      gap: 4rem;
+      a {
+        font-size: 1.7rem;
+        color: var(--color-text-dark);
+        font-weight: var(--font-weight-bold);
+        transition: 0.3s ease;
+      }
+      a:hover {
+        color: var(--color-text-light);
+        text-shadow: 0 0 8px rgb(252, 252, 252);
+      }
+    }
+
+    .nav-right {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+
+      .btn {
+        display: inline-block;
+        padding: 0.5rem 1.3rem;
+        border: none;
+        border-radius: 50px;
+        text-align: center;
+        transition: 0.3s ease;
+        font-family: var(--font-family-1);
+        font-weight: var(--font-weight-bold);
+        font-size: 1.4rem;
+        cursor: pointer;
+
+        @media screen and (max-width: 760px) {
+          display: none;
+        }
+      }
+
+      .btn-platform {
+        background: var(--color-linear-2);
+        color: var(--color-text-dark);
+        box-shadow: 0 0 10px rgba(1, 90, 254, 0.75);
+      }
+
+      .btn-platform:hover,
+      .btn-platform:hover .rightarrow-icon {
+        color: var(--color-text-light);
+      }
+      .btn-platform:hover {
+        background: var(--color-linear-1-2);
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  #logo {
+    .logo {
+      height: 8rem;
+      width: auto;
+      display: flex;
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    a:hover .logo {
+      transform: scale(1.1);
+      filter: brightness(1.8);
+    }
+  }
+
+  #black-bar {
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-dark);
+    display: none;
+  }
+
+  #nav-blackbar {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 5rem 5rem;
+  }
+
+  /*  834px - 1068px - Laptop Header */
+  @media screen and (max-width: 1392px) {
+    #btn-blackbar {
+      z-index: 101;
+      display: block;
+    }
+
+    .header {
+      height: 13rem;
+    }
+
+    .navigation .navbar {
+      display: none;
+    }
+  }
+
+  /*  576px - 833px - Tablet Header */
+  @media screen and (max-width: 833px) {
+    #btn-blackbar {
+      z-index: 101;
+      display: block;
+    }
+
+    .header {
+      position: sticky;
+      top: 0;
+      left: 0;
+      height: 6rem;
+      padding: 0;
+      .navigation {
+        width: 100%;
+        height: 6rem;
+        padding: 0 2.5rem 0 1.5rem;
+        border-radius: 0;
+        .navbar {
+          display: none;
+        }
+        .btn-header {
+          padding: 0.8rem 1.2rem;
+          font-size: 1.4rem;
+        }
+        .nav-right {
+          width: 18.5rem;
+        }
+      }
+    }
+  }
+}
+
+/* Category button Starting*/
+.btn-category {
+  background-color: transparent;
+  color: var(--color-text-light);
+  border: 2px solid rgba(1, 233, 254);
+  box-shadow: 0 0 10px rgba(1, 233, 254, 0.75);
+  height: 4rem;
+  width: fit-content;
+  max-width: 100%;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.btn-category:hover {
+  background: var(--color-linear-1-2);
+  color: var(--color-dark);
+}
+
+.btn-category.active {
+  background: var(--color-linear-1-2);
+  color: var(--color-dark);
+}
+
+/* Black Bar button and icon Starting*/
+#btn-blackbar {
+  display: none;
+  cursor: pointer;
+}
+
+#btn-blackbar.active #blackbarbutton-icon {
+  transform: rotate(90deg);
+}
+
+#btn-blackbar:hover,
+#btn-blackbar:hover #blackbarbutton-icon {
+  color: var(--color-text-light);
+}
+
+#blackbarbutton-icon {
+  color: var(--color-text-hover);
+  transition: 0.3s ease;
+  font-size: 3rem;
+}

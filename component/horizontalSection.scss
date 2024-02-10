@@ -1,0 +1,24 @@
+/* horizontalSection.scss */
+.horizontal-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #f3f4f6; // Example background color
+}
+
+.wide-text {
+  font-size: 6rem; // Adjust for larger text
+  font-weight: bold;
+  white-space: nowrap;
+  color: white; // If you want the text in white
+}
+
+.next-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e5e7eb; // Example background color
+}
