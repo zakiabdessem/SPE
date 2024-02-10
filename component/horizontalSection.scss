@@ -1,24 +1,50 @@
-/* horizontalSection.scss */
-.horizontal-section {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  background-color: #f3f4f6; // Example background color
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
+
+body {
+	margin:0;
+	background:#15151e;
+	overflow-x:hidden;
 }
 
-.wide-text {
-  font-size: 6rem; // Adjust for larger text
-  font-weight: bold;
-  white-space: nowrap;
-  color: white; // If you want the text in white
+
+
+.races {
+	width:fit-content;
+	display:flex;
+	flex-wrap:nowrap;
 }
 
-.next-section {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #e5e7eb; // Example background color
+.races h2 {
+	font-family: 'Staatliches', cursive;
+	font-size:20vw;
+	flex-shrink:0;
+	padding-right:0.3em;
+	padding-left:0.3em;
+	color:white;
+	margin:0;	
+}
+
+.races h2:last-of-type {
+	/*background:#e1e1ff;*/
+}
+
+.lightBG {
+	background:#313143;
+}
+
+.space-20vh {
+	height:20vh;
+}
+
+.space-30vh {
+	height:30vh;
+}
+
+.space-50vh {
+	height:50vh;
+}
+
+.space-100vh {
+	height:100vh;
 }
