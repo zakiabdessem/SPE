@@ -21,12 +21,9 @@ body {
 	flex-shrink:0;
 	padding-right:0.3em;
 	padding-left:0.3em;
-	color:white;
+	
+	color:var(--color-secondary);
 	margin:0;	
-}
-
-.races h2:last-of-type {
-	/*background:#e1e1ff;*/
 }
 
 .lightBG {

@@ -20,6 +20,7 @@ const HorizontalSection: React.FC = () => {
       let racesWidth = races.scrollWidth;
       return -(racesWidth - window.innerWidth);
     };
+    
 
     const tween = gsap.to(races, {
       x: getScrollAmount,
@@ -29,7 +30,7 @@ const HorizontalSection: React.FC = () => {
 
     ScrollTrigger.create({
       trigger: ".racesWrapper",
-      start: "top 20%",
+      start: "top 30%",
       end: () => `+=${getScrollAmount() * -1}`,
       pin: true,
       animation: tween,
@@ -48,13 +49,12 @@ const HorizontalSection: React.FC = () => {
   return (
     <div className="section-container">
       <section className="horizontal-section min-h-screen flex items-center justify-center bg-gray-100 overflow-hidden">
-        <div className="space-50vh lightBG"></div>
 
         <div className="racesWrapper">
           <div className="races">
-            <h2>We</h2>
-            <h2>Are</h2>
-            <h2>SPE</h2>
+            <h2>WeAre<span style={{
+              color: "var(--color-primary)",
+            }}>SPE</span></h2>
             <h2>means</h2>
             <h2>Technical</h2>
             <h2>Knowledge</h2>
@@ -62,7 +62,6 @@ const HorizontalSection: React.FC = () => {
           </div>
         </div>
 
-        <div className="space-100vh lightBG"></div>
       </section>
     </div>
   );
