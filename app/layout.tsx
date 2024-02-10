@@ -17,6 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+     
       <body className={inter.className + "h-full"}>
         <div className="page-background bg-black"></div>
         <div className="page-background-1"></div>

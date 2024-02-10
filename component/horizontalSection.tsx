@@ -52,7 +52,7 @@ const HorizontalSection: React.FC = () => {
         <div className="racesWrapper">
           <div className="races">
             <h2 className="pl-4">
-              #WeAre
+              #WEARE
               <span
                 style={{
                   color: "var(--color-primary)",

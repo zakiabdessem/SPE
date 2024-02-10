@@ -29,7 +29,7 @@ body {
   overflow-x: hidden;
 }
 body {
-  position: relative;
+  /* position: relative;*/
 }
 ul,
 ol {
@@ -270,7 +270,6 @@ section {
     transform: translateY(0);
   }
 }
-
 
 @keyframes FloatingAboutImage {
   0% {
