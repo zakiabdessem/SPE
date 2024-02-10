@@ -20,7 +20,6 @@ const HorizontalSection: React.FC = () => {
       let racesWidth = races.scrollWidth;
       return -(racesWidth - window.innerWidth);
     };
-    
 
     const tween = gsap.to(races, {
       x: getScrollAmount,
@@ -30,12 +29,12 @@ const HorizontalSection: React.FC = () => {
 
     ScrollTrigger.create({
       trigger: ".racesWrapper",
-      start: "top 30%",
-      end: () => `+=${getScrollAmount() * -1}`, //
+      endTrigger: ".next-section",
+      start: "top 20%",
+      end: () => `+=${getScrollAmount() * -1}`,
       pin: true,
       animation: tween,
       scrub: 1,
-      invalidateOnRefresh: true,
       markers: true,
     });
 
@@ -48,21 +47,27 @@ const HorizontalSection: React.FC = () => {
 
   return (
     <div className="section-container">
-      <section className="horizontal-section min-h-screen flex items-center justify-center bg-gray-100 overflow-hidden">
-
+      <section>
+        <div className="space-20vh"></div>
         <div className="racesWrapper">
           <div className="races">
-            <h2>WeAre<span style={{
-              color: "var(--color-primary)",
-            }}>SPE</span></h2>
-            <h2>means</h2>
+            <h2>
+              WeAre
+              <span
+                style={{
+                  color: "var(--color-primary)",
+                }}>
+                SPE
+              </span>
+            </h2>
+            <h2>Means</h2>
             <h2>Technical</h2>
             <h2>Knowledge</h2>
-
           </div>
         </div>
-
+        <div className="space-50vh"></div>
       </section>
+      <section className="next-section">next section</section>
     </div>
   );
 };
