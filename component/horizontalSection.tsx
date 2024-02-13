@@ -1,12 +1,16 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import "./horizontalSection.scss";
+import { useInView } from "framer-motion";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const HorizontalSection: React.FC = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
   useEffect(() => {
     const races = document.querySelector(".races") as HTMLElement;
 
@@ -14,7 +18,6 @@ const HorizontalSection: React.FC = () => {
       console.error("Races element not found");
       return;
     }
-    console.log(races.offsetWidth);
 
     const getScrollAmount = (): number => {
       let racesWidth = races.scrollWidth;
@@ -38,7 +41,6 @@ const HorizontalSection: React.FC = () => {
       markers: false,
     });
 
-    // Cleanup function to kill animations and ScrollTriggers on component unmount
     return () => {
       tween.kill();
       ScrollTrigger.getAll().forEach((st) => st.kill());
@@ -47,11 +49,17 @@ const HorizontalSection: React.FC = () => {
 
   return (
     <div className="section-container overflow-x-hidden">
-      <section>
+      <section ref={ref}>
         <div className="space-20vh"></div>
         <div className="racesWrapper">
           <div className="races">
-            <h2 className="pl-4">
+            <h2
+              className="pl-4"
+              style={{
+                transform: isInView ? "none" : "translateX(-200px)",
+                opacity: isInView ? 1 : 0,
+                transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+              }}>
               #WEARE
               <span
                 style={{
@@ -63,6 +71,9 @@ const HorizontalSection: React.FC = () => {
             <h2>Means</h2>
             <h2>Technical</h2>
             <h2>Knowledge</h2>
+            {/*<h2 className="flex justify-center items-center">
+              <AboutSection />
+              </h2>*/}
           </div>
         </div>
         {/*<div className="space-50vh"></div>*/}

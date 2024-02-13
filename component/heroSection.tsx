@@ -1,20 +1,22 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./heroSection.scss";
+import { useInView } from "framer-motion";
+
 export default function HeroSecetion() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
   return (
-    <section id="hero">
+    <section id="hero" ref={ref}>
       <div className="container">
         <div className="hero">
           <div
             className="hero-content"
             data-sr-id="2"
             style={{
-              visibility: "visible",
-              opacity: 1,
-              transform:
-                "matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)",
-              transition:
-                "opacity 1.5s cubic-bezier(0.5, 0, 0, 1) 0.2s, transform 1.5s cubic-bezier(0.5, 0, 0, 1) 0.2s",
+              transform: isInView ? "none" : "translateX(-50px)",
+              opacity: isInView ? 1 : 0,
+              transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.2s",
             }}>
             <h1>SPE UB2 Student Chapter</h1>
             <h2>
@@ -42,14 +44,9 @@ export default function HeroSecetion() {
             className="hero-img"
             data-sr-id="3"
             style={{
-              visibility: "visible",
-              opacity: 1,
-              transform:
-                "matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)",
-              transition:
-                "opacity 1.5s cubic-bezier(0.5, 0, 0, 1) 0.2s, transform 1.5s cubic-bezier(0.5, 0, 0, 1) 0.2s",
-              borderRadius: "0",
-              overflow: "hidden",
+              transform: isInView ? "none" : "translateX(50px)",
+              opacity: isInView ? 1 : 0,
+              transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.2s",
             }}>
             <img
               id="hero-img"

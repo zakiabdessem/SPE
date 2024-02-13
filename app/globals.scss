@@ -220,6 +220,15 @@ section {
     max-width: 1670px; /* here ----------------------------------- */
     margin: 0 auto;
     padding: 0 4rem;
+
+    @media screen and (min-width: 576px) and (max-width: 833px) {
+      padding: 0 2rem;
+    }
+
+    /*  575px and Lower - Mobile Sections */
+    @media screen and (max-width: 575px) {
+      padding: 0 2rem;
+    }
   }
   div {
     display: block;
@@ -259,6 +268,18 @@ section {
   }
 }
 
+@keyframes BlinkingWhiteShadowLite {
+  0% {
+    text-shadow: 0 0 10px var(--color-text-dark);
+  }
+  50% {
+    text-shadow: 0 0 8px var(--color-text-dark);
+  }
+  100% {
+    text-shadow: 0 0 10px var(--color-text-dark);
+  }
+}
+
 @keyframes FloatingHeroImage {
   0% {
     transform: translateY(0);
@@ -281,4 +302,12 @@ section {
   100% {
     transform: translateY(0);
   }
+}
+
+#stats {
+  scroll-margin-top: 500px;
+}
+
+#events {
+  scroll-margin-top: 1200px;
 }
