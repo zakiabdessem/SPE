@@ -18,9 +18,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className + "h-full"}>
+      <body className={inter.className}>
         <div className="page-background bg-black"></div>
-        <div className="page-background-1"></div>
+        <div className="page-background-1 min-h-[80vh]"></div>
 
         {children}
       </body>

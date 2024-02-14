@@ -72,7 +72,7 @@ const HorizontalSection: React.FC = () => {
             marginBottom: "10px",
 
             transform: isInView ? "none" : "translateY(-30px)",
-            opacity: isInView ? 1 : 0.1,
+            opacity: isInView ? 1 : 0.2,
             transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.2s",
             animation: "FloatingMouseImage 5s ease-in-out infinite",
           }}
