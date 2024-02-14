@@ -83,7 +83,15 @@ function WhoSection() {
       <div className="container">
         <div className="about">
           <div className="about-content">
-            <h3 data-sr-id={4}>Our Services</h3>
+            <h3
+              data-sr-id={4}
+              style={{
+                transform: inViewHeader ? "none" : "translateX(100px)",
+                opacity: inViewHeader ? 1 : 0,
+                transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+              }}>
+              Our Services
+            </h3>
             <div>
               <h2
                 data-sr-id={5}

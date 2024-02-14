@@ -3,8 +3,14 @@ import "./aboutSection.scss";
 import { useInView } from "framer-motion";
 
 function AboutSection() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  const refText = useRef(null);
+  const isInViewText = useInView(refText, { once: true });
+
+  const refContent1 = useRef(null);
+  const isInViewContent1 = useInView(refContent1, { once: true });
+
+  const refContent2 = useRef(null);
+  const isInViewContent2 = useInView(refContent2, { once: true });
 
   return (
     <section className="next-section" id="about">
@@ -25,22 +31,22 @@ function AboutSection() {
               <img src="assets/images/about.png" alt="" />
             </i>
           </div>
-          <div className="about-content">
+          <div className="about-content" ref={refText}>
             <h3
               data-sr-id={4}
               style={{
-                transform: isInView ? "none" : "translateX(100px)",
-                opacity: isInView ? 1 : 0,
+                transform: isInViewText ? "none" : "translateX(100px)",
+                opacity: isInViewText ? 1 : 0,
                 transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
               }}>
               Get to Know Us
             </h3>
-            <div ref={ref}>
+            <div>
               <h2
                 data-sr-id={5}
                 style={{
-                  transform: isInView ? "none" : "translateX(100px)",
-                  opacity: isInView ? 1 : 0,
+                  transform: isInViewText ? "none" : "translateX(100px)",
+                  opacity: isInViewText ? 1 : 0,
                   transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
                 }}>
                 Who are we?
@@ -48,16 +54,17 @@ function AboutSection() {
               <div
                 className="d1"
                 data-sr-id={7}
+                ref={refContent1}
                 style={{
-                  transform: isInView ? "none" : "translateX(175px)",
-                  opacity: isInView ? 1 : 0,
+                  transform: isInViewContent1 ? "none" : "translateX(175px)",
+                  opacity: isInViewContent1 ? 1 : 0,
                   transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.4s",
                 }}>
                 <p
                   className="p1"
                   style={{
-                    transform: isInView ? "none" : "translateX(175px)",
-                    opacity: isInView ? 1 : 0,
+                    transform: isInViewContent1 ? "none" : "translateX(175px)",
+                    opacity: isInViewContent1 ? 1 : 0,
                     transition:
                       "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.4s",
                   }}>
@@ -72,16 +79,17 @@ function AboutSection() {
               <div
                 className="d2"
                 data-sr-id={8}
+                ref={refContent2}
                 style={{
-                  transform: isInView ? "none" : "translateX(200px)",
-                  opacity: isInView ? 1 : 0,
+                  transform: isInViewContent2 ? "none" : "translateX(200px)",
+                  opacity: isInViewContent2 ? 1 : 0,
                   transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
                 }}>
                 <p
                   className="p2"
                   style={{
-                    transform: isInView ? "none" : "translateX(200px)",
-                    opacity: isInView ? 1 : 0,
+                    transform: isInViewContent2 ? "none" : "translateX(200px)",
+                    opacity: isInViewContent2 ? 1 : 0,
                     transition:
                       "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
                   }}>

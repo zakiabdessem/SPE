@@ -1,20 +1,17 @@
-"use client"
+"use client";
 import { useEffect } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
 const useSmoothScroll = () => {
   useEffect(() => {
-    // Ensure GSAP plugins are registered
     gsap.registerPlugin(ScrollTrigger);
 
     let container = document.querySelector("main");
 
     if (container) {
-      // Set the container to a fixed position to hijack the native scroll
       gsap.set(container, { overflow: "hidden" });
 
-      // Create a smooth scrolling effect using GSAP
       gsap.to(container, {
         y: () =>
           -(container.scrollHeight - document.documentElement.clientHeight),
@@ -25,12 +22,11 @@ const useSmoothScroll = () => {
           end: "bottom bottom",
           scrub: 1,
           invalidateOnRefresh: true,
-          markers: true,
+          markers: false,
         },
       });
     }
 
-    // Cleanup function to reset styles
     return () => {
       gsap.killTweensOf(container);
       if (container) {

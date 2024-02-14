@@ -1,6 +1,6 @@
 /* Services section */
 .events {
-  padding: 10rem 0;
+  padding: 2rem 0;
   color: var(--color-text-light);
 }
 
@@ -17,6 +17,9 @@
     text-align: center;
     margin-bottom: 2rem;
     animation: BlinkingWhiteShadow 1.5s ease-in-out infinite;
+    @media screen and (max-width: 960px) {
+      font-size: 2.8rem;
+    }
   }
   h3 {
     font-size: 1.6rem;
@@ -27,6 +30,9 @@
     color: transparent;
     text-align: center;
     margin-bottom: 5rem;
+    @media screen and (max-width: 960px) {
+      font-size: 1.3rem;
+    }
   }
 }
 
@@ -37,30 +43,56 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 5rem;
+
   .events-box {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     text-align: center;
-    height: 35rem;
+    max-height: 35rem;
     flex: 0 0 35rem;
     padding: 0 3rem;
     border-radius: 16px;
     border: 2px solid var(--color-border);
     background-color: var(--color-btn-dark);
-    transition: 0.5s;
+    transition: 0.1s;
+
+    #heroImg {
+      max-height: 15rem;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 10%;
+      padding: 10px 0px;
+    }
+
     @media screen and (min-width: 834px) and (max-width: 1068px) {
       flex: 0 0 35rem;
       padding: 0 2rem;
     }
+    @media screen and (max-width: 576px) {
+      flex: 0 0 25rem;
+      height: 20rem;
+      padding: 0 0;
+    }
+    @media screen and (max-width: 576px) {
+      #heroImg {
+        max-height: 12rem;
+        width: 70%;
+        object-fit: cover;
+       
+      }
+    }
 
-   
     h3 {
       margin-top: 2rem;
       font-size: 1.8rem;
       font-weight: var(--font-weight-bold);
       color: var(--color-text-light);
+      @media screen and (max-width: 576px) {
+        margin-top: 6rem;
+        font-size: 1.4rem;
+      }
     }
     p {
       margin-top: 1rem;
@@ -68,9 +100,11 @@
       font-size: 1.2rem;
       color: var(--color-text-dark);
       font-weight: var(--font-weight-normal);
-    }
-    a {
-      margin-top: 2rem;
+      @media screen and (max-width: 576px) {
+        margin-top: 0.6rem;
+        margin-bottom: 6rem;
+        font-size: 1.1rem;
+      }
     }
   }
   .events-box:hover {

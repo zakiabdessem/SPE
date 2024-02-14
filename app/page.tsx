@@ -7,15 +7,37 @@ import AboutSection from "@/component/aboutSection";
 import StatsSection from "@/component/statSection";
 
 import Navbar from "@/component/navbar";
-import { Import } from "lucide-react";
 import useSmoothScroll from "../useSmoothScroll";
 import WhoSection from "@/component/whoSection";
 import { useEffect } from "react";
 import EventSection from "@/component/eventSection";
-import TechSection from "@/component/techSection";
+import { useRouter, usePathname } from "next/navigation";
 
 export default function Home() {
+  const router = useRouter();
+  const hash = usePathname();
+
   useSmoothScroll();
+
+  {
+    useEffect(() => {
+      const handleHash = () => {
+        //hash using usePathname  router next js
+        if (
+          hash === "/about" ||
+          hash === "/stats" ||
+          hash === "/who" ||
+          hash === "/events"
+        ) {
+          const element = document.getElementById(hash.replace("/", ""));
+          if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+          }
+        }
+      };
+      handleHash();
+    }, []);
+  }
 
   return (
     <>
@@ -29,7 +51,6 @@ export default function Home() {
         <StatsSection />
         <WhoSection />
         <EventSection />
-        <TechSection />
       </main>
     </>
   );
