@@ -8,47 +8,55 @@ import StatsSection from "@/component/statSection";
 import Navbar from "@/component/navbar";
 import useSmoothScroll from "../useSmoothScroll";
 import WhoSection from "@/component/whoSection";
-import { useEffect } from "react";
 import EventSection from "@/component/eventSection";
-import { usePathname } from "next/navigation";
 import Footer from "@/component/footer";
 
+
 export default function Home() {
-  const hash = usePathname();
 
   useSmoothScroll();
-
-  useEffect(() => {
-    const handleHash = () => {
-      //hash using usePathname  router next js
-      if (
-        hash === "/about" ||
-        hash === "/stats" ||
-        hash === "/who" ||
-        hash === "/events"
-      ) {
-        const element = document.getElementById(hash.replace("/", ""));
-        if (element) {
-          element.scrollIntoView({ behavior: "smooth" });
-        }
-      }
-    };
-    handleHash();
-  }, []);
 
   return (
     <>
       <Navbar />
 
-      <HeroSecetion />
-      <HorizontalSection />
-      <main>
+      <div className="min-h-[100vh]">
+        <HeroSecetion />
+        <div className="flex flex-col justify-center items-center mb-2">
+          <img
+            src="assets/images/mouse.svg"
+            alt="mouse"
+            style={{
+              height: "28px",
+              width: "28px",
+              marginBottom: "10px",
+
+              animation: "FloatingMouseImage 5s ease-in-out infinite",
+            }}
+          />
+          <img
+            src="assets/images/arrow-long.svg"
+            alt="arrow-long"
+            style={{
+              height: "117px",
+              width: "30px",
+              marginBottom: "10px",
+
+              animation: "FloatingMouseImage 5s ease-in-out infinite",
+            }}
+          />
+        </div>
+
+        <HorizontalSection />
+
         <AboutSection />
         <StatsSection />
         <WhoSection />
+
         <EventSection />
+
         <Footer />
-      </main>
+      </div>
     </>
   );
 }

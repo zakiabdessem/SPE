@@ -62,6 +62,7 @@ export default function HeroSecetion() {
           </div>
         </div>
       </div>
+     
     </section>
   );
 }

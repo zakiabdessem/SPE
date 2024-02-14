@@ -21,7 +21,6 @@ export default function RootLayout({
       <body className={inter.className}>
         <div className="page-background bg-black"></div>
         <div className="page-background-1 min-h-[80vh]"></div>
-
         {children}
       </body>
     </html>

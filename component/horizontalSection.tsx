@@ -4,10 +4,12 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import "./horizontalSection.scss";
 import { useInView } from "framer-motion";
+import useScrollToTop from "../useScrollToTop";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const HorizontalSection: React.FC = () => {
+  useScrollToTop();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
@@ -48,36 +50,7 @@ const HorizontalSection: React.FC = () => {
   }, []);
 
   return (
-    <div className="section-container overflow-x-hidden">
-      <div className="flex flex-col justify-center items-center mb-2">
-        <img
-          src="assets/images/mouse.svg"
-          alt="mouse"
-          style={{
-            height: "28px",
-            width: "28px",
-            marginBottom: "10px",
-            transform: isInView ? "none" : "translateY(-20px)",
-            opacity: isInView ? 1 : 0.1,
-            transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.2s",
-            animation: "FloatingMouseImage 5s ease-in-out infinite",
-          }}
-        />
-        <img
-          src="assets/images/arrow-long.svg"
-          alt="arrow-long"
-          style={{
-            height: "117px",
-            width: "30px",
-            marginBottom: "10px",
-
-            transform: isInView ? "none" : "translateY(-30px)",
-            opacity: isInView ? 1 : 0.2,
-            transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.2s",
-            animation: "FloatingMouseImage 5s ease-in-out infinite",
-          }}
-        />
-      </div>
+    <div className="section-container overflow-x-auto">
       <section ref={ref}>
         <div className="space-20vh"></div>
         <div className="racesWrapper">
