@@ -17,7 +17,6 @@ How to use
 Installation
 Tailwind is the default style AND aslo SASS. styled-components (styled) are also available.
 
-yarn create pluto-app next my-app
 # yarn create SPE <next> my-app <tailwind|styled>? -ts?
 
 
