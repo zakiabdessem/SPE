@@ -1,6 +1,10 @@
 #Club website of SPE UB2
 This is a Next.js project bootstrapped with create-next-app.
 
+Demo link: https://speub2.vercel.app/
+
+
+
 Getting Started
 First, run the development server:
 
