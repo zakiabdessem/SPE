@@ -1,6 +1,10 @@
 import React, { useRef, useState, useEffect } from "react";
 import "./whoSection.scss";
 import { useInView } from "framer-motion";
+import Image from "next/image";
+
+//images
+import oilRigImage from "../public/assets/images/oil-rig.png";
 
 interface Offer {
   title: string;
@@ -12,25 +16,25 @@ const offers: Offer[] = [
     title: "Professional Development",
     description:
       "Access workshops and training sessions to enhance your technical skills and industry knowledge.",
-    color: "rgb(80, 164, 138)",
+    color: "#0C359E",
   },
   {
     title: "Mentorship Programs",
     description:
       "Connect with experienced professionals for guidance and advice on your career path.",
-    color: "rgb(80, 107, 138)",
+    color: "#3652AD",
   },
   {
     title: "Networking Events",
     description:
       "Build relationships with peers, alumni, and industry leaders through networking events and social gatherings.",
-    color: "rgb(80, 85, 138)",
+    color: "#FFB0B0",
   },
   {
     title: "Career Resources",
     description:
       "Explore job opportunities, internships, and career development resources tailored to the oil and gas sector.",
-    color: "rgb(80, 48, 138)",
+    color: "#FC6736",
   },
 ];
 
@@ -40,7 +44,7 @@ function WhoSection() {
 
   const refElements = useRef<(HTMLDivElement | null)[]>([]);
   const [inViewStates, setInViewStates] = useState<boolean[]>(
-    new Array(offers.length).fill(false),
+    new Array(offers.length).fill(false)
   );
   const refHeader = useRef(null);
   const inViewHeader = useInView(refHeader, { once: true });
@@ -53,7 +57,7 @@ function WhoSection() {
       (entries) => {
         entries.forEach((entry) => {
           const index = refElements.current.findIndex(
-            (ref) => ref === entry.target,
+            (ref) => ref === entry.target
           );
           if (index !== -1) {
             setInViewStates((prevState) => {
@@ -64,7 +68,7 @@ function WhoSection() {
           }
         });
       },
-      { threshold: 0.1 },
+      { threshold: 0.1 }
     );
 
     refElements.current.forEach((ref) => {
@@ -136,7 +140,7 @@ function WhoSection() {
               transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
             }}>
             <i>
-              <img src="assets/images/oil-rig.png" alt="" />
+              <Image src={oilRigImage} alt="Oilrig" />
             </i>
           </div>
         </div>

@@ -48,7 +48,20 @@ const HorizontalSection: React.FC = () => {
       ScrollTrigger.getAll().forEach((st) => st.kill());
     };
   }, []);
-  
+
+  //refresh page when end of resizing to fix gspa scroll trigger
+  useEffect(() => {
+    const handleResize = () => {
+      window.location.reload();
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+
 
   return (
     <div className="section-container overflow-x-auto">
