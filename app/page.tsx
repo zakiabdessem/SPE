@@ -10,10 +10,13 @@ import useSmoothScroll from "../useSmoothScroll";
 import WhoSection from "@/component/whoSection";
 import EventSection from "@/component/eventSection";
 import Footer from "@/component/footer";
+import Image from "next/image";
 
+//images
+import mouseImage from "../public/assets/images/mouse.svg";
+import arrowImage from "../public/assets/images/arrow-long.svg";
 
 export default function Home() {
-
   useSmoothScroll();
 
   return (
@@ -23,8 +26,8 @@ export default function Home() {
       <div className="min-h-[100vh]">
         <HeroSecetion />
         <div className="flex flex-col justify-center items-center mb-2">
-          <img
-            src="assets/images/mouse.svg"
+          <Image
+            src={mouseImage}
             alt="mouse"
             style={{
               height: "28px",
@@ -34,8 +37,8 @@ export default function Home() {
               animation: "FloatingMouseImage 5s ease-in-out infinite",
             }}
           />
-          <img
-            src="assets/images/arrow-long.svg"
+          <Image
+            src={arrowImage}
             alt="arrow-long"
             style={{
               height: "117px",

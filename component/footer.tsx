@@ -1,5 +1,6 @@
 import React from "react";
 import "./footer.scss";
+import Image from "next/image";
 
 function Footer() {
   return (
@@ -64,10 +65,12 @@ function Footer() {
           <div className="item-4 footer-row">
             <a href="#home">
               <i>
-                <img
+                <Image
                   className="logo"
-                  src="assets/images/spe-logo-white.png"
+                  src="/assets/images/spe-logo-white.png"
                   alt="Logo"
+                  height={80}
+                  width={100}
                   style={{ width: "100px", height: "80px" }}
                 />
               </i>

@@ -1,6 +1,9 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
+import Image from "next/image";
+
 import "./heroSection.scss";
 import { useInView } from "framer-motion";
+import heroImage from "../public/assets/images/Africa.png";
 
 export default function HeroSecetion() {
   const ref = useRef(null);
@@ -48,9 +51,9 @@ export default function HeroSecetion() {
               opacity: isInView ? 1 : 0,
               transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.2s",
             }}>
-            <img
+            <Image
               id="hero-img"
-              src="assets/images/Africa.png"
+              src={heroImage}
               alt=""
               style={{
                 width: "100%",
@@ -62,7 +65,6 @@ export default function HeroSecetion() {
           </div>
         </div>
       </div>
-     
     </section>
   );
 }

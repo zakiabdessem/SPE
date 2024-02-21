@@ -1,8 +1,16 @@
 import React, { useRef } from "react";
 import "./eventSection.scss";
 import { useInView } from "framer-motion";
+import Image from "next/image";
 
-function eventSection() {
+//images
+import o2rImage from "../public/assets/images/o2r.jpg";
+import adipecImage from "../public/assets/images/Adipec.jpg";
+import en4meImage from "../public/assets/images/energy4me.png";
+import alpImage from "../public/assets/images/alp.jpg";
+import dvLsImage from "../public/assets/images/diversity.jpg";
+
+function EventSection() {
   const refText = useRef(null);
   const isInViewText = useInView(refText, { once: true });
 
@@ -49,10 +57,10 @@ function eventSection() {
               }}>
               <i className=" title-icon" />
               <h3>02R</h3>
-              <img id="heroImg" src="assets/images/o2r.jfif" alt="" />
+              <Image id="heroImg" src={o2rImage} alt="O2R event" />
               <p>
                 Hosted by SPE-UB2, focuses on sustainable solutions for
-                Algeria's future, emphasizing CCUS initiatives.
+                Algeria&apos;s future, emphasizing CCUS initiatives.
               </p>
             </div>
 
@@ -66,7 +74,7 @@ function eventSection() {
               }}>
               <i className=" title-icon" />
               <h3>ADIPEC</h3>
-              <img id="heroImg" src="assets/images/Adipec.jpg" alt="" />
+              <Image id="heroImg" src={adipecImage} alt="ADIPEC event" />
               <p>
                 A global event for the oil and gas industry, gathering
                 professionals to discuss innovations and trends.
@@ -83,7 +91,7 @@ function eventSection() {
               }}>
               <i className=" title-icon" />
               <h3>Energy4me</h3>
-              <img id="heroImg" src="assets/images/energy4me.png" alt="" />
+              <Image id="heroImg" src={en4meImage} alt="Energy4me event" />
               <p>
                 Raises energy awareness globally, educating the public about the
                 industry.
@@ -100,7 +108,7 @@ function eventSection() {
               }}>
               <i className=" title-icon" />
               <h3>ALP Program</h3>
-              <img id="heroImg" src="assets/images/alp.jpg" alt="" />
+              <Image id="heroImg" src={alpImage} alt="" />
               <p>
                 Educates high school students about the oil industry, fostering
                 skill development.
@@ -117,7 +125,7 @@ function eventSection() {
               }}>
               <i className=" title-icon" />
               <h3>Diversity & Inclusion</h3>
-              <img id="heroImg" src="assets/images/diversity.jpg" alt="" />
+              <Image id="heroImg" src={dvLsImage} alt="" />
               <p>
                 Promotes women in energy, assists local chapters, and advocates
                 for diversity in STEM.
@@ -130,4 +138,4 @@ function eventSection() {
   );
 }
 
-export default eventSection;
+export default EventSection;

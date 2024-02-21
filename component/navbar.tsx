@@ -1,6 +1,11 @@
 "use client";
 import React from "react";
 import "./navbar.scss";
+import Image from "next/image";
+import menuImage from "../public/assets/images/menu.svg";
+
+//images
+import logoImage from "../public/assets/images/spe-logo-white.png";
 
 function Navbar() {
   const handleMenuClick = () => {
@@ -13,11 +18,7 @@ function Navbar() {
         <div id="logo">
           <a href="#">
             <i>
-              <img
-                className="logo"
-                src="assets/images/spe-logo.png"
-                alt="Logo"
-              />
+              <Image className="logo" src={logoImage} alt="Logo" />
             </i>
           </a>
         </div>
@@ -77,7 +78,7 @@ function Navbar() {
               marginLeft: "16px",
             }}
             onClick={handleMenuClick}>
-            <img className="m-5" src="/assets/images/menu.svg" alt="menu" />
+            <Image className="m-5" src={menuImage} alt="menu" />
           </div>
         </div>
       </div>

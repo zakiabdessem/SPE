@@ -1,6 +1,10 @@
 import React, { useRef } from "react";
 import "./aboutSection.scss";
 import { useInView } from "framer-motion";
+import Image from "next/image";
+
+//images
+import aboutImage from "../public/assets/images/about.png";
 
 function AboutSection() {
   const refText = useRef(null);
@@ -28,7 +32,7 @@ function AboutSection() {
                 "opacity 1.5s cubic-bezier(0.5, 0, 0, 1) 0.2s, transform 1.5s cubic-bezier(0.5, 0, 0, 1) 0.2s",
             }}>
             <i>
-              <img src="assets/images/about.png" alt="" />
+              <Image src={aboutImage} alt="" />
             </i>
           </div>
           <div className="about-content" ref={refText}>

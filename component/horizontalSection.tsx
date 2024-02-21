@@ -48,6 +48,7 @@ const HorizontalSection: React.FC = () => {
       ScrollTrigger.getAll().forEach((st) => st.kill());
     };
   }, []);
+  
 
   return (
     <div className="section-container overflow-x-auto">
