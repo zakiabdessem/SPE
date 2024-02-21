@@ -16,25 +16,25 @@ const offers: Offer[] = [
     title: "Professional Development",
     description:
       "Access workshops and training sessions to enhance your technical skills and industry knowledge.",
-    color: "#0C359E",
+    color: "#0766AD",
   },
   {
     title: "Mentorship Programs",
     description:
       "Connect with experienced professionals for guidance and advice on your career path.",
-    color: "#3652AD",
+    color: "#29ADB2",
   },
   {
     title: "Networking Events",
     description:
       "Build relationships with peers, alumni, and industry leaders through networking events and social gatherings.",
-    color: "#FFB0B0",
+    color: "#92C7CF",
   },
   {
     title: "Career Resources",
     description:
       "Explore job opportunities, internships, and career development resources tailored to the oil and gas sector.",
-    color: "#FC6736",
+    color: "#C7C8CC",
   },
 ];
 
