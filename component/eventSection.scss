@@ -70,11 +70,10 @@
       flex: 0 0 35rem;
       padding: 0 2rem;
     }
+
     @media screen and (max-width: 576px) {
       flex: 0 0 25rem;
       padding: 0 0;
-    }
-    @media screen and (max-width: 576px) {
       #heroImg {
         max-height: 12rem;
         width: 70%;
@@ -87,8 +86,10 @@
       font-size: 1.8rem;
       font-weight: var(--font-weight-bold);
       color: var(--color-text-light);
+
+      animation: BlinkingWhiteShadow 1.5s ease-in-out infinite;
+
       @media screen and (max-width: 576px) {
-        margin-top: 6rem;
         font-size: 1.4rem;
       }
     }
@@ -100,8 +101,7 @@
       color: var(--color-text-dark);
       font-weight: var(--font-weight-normal);
       @media screen and (max-width: 576px) {
-        margin-top: 0.6rem;
-        margin-bottom: 6rem;
+        margin-top: 0.6rem 0;
         font-size: 1.1rem;
       }
     }

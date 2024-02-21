@@ -56,7 +56,7 @@ function EventSection() {
                 transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
               }}>
               <i className=" title-icon" />
-              <h3>02R</h3>
+              <h3>Oil 2 Renewable</h3>
               <Image id="heroImg" src={o2rImage} alt="O2R event" />
               <p>
                 Hosted by SPE-UB2, focuses on sustainable solutions for
