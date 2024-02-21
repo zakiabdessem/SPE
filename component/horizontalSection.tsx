@@ -29,13 +29,13 @@ const HorizontalSection: React.FC = () => {
     const tween = gsap.to(races, {
       x: getScrollAmount,
       duration: 3,
-      ease: "none",
+      ease: "slow",
     });
 
     ScrollTrigger.create({
       trigger: ".racesWrapper",
       endTrigger: ".next-section",
-      start: `top ${window.innerWidth > 1200 ? "20%" : "60%"}`,
+      start: `top ${window.innerWidth > 1200 ? "20%" : "40%"}`,
       end: () => `+=${getScrollAmount() * -1}`,
       pin: true,
       animation: tween,
