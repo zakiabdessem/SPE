@@ -10,8 +10,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 const HorizontalSection: React.FC = () => {
   useScrollToTop();
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
 
   useEffect(() => {
     const races = document.querySelector(".races") as HTMLElement;
@@ -51,17 +49,13 @@ const HorizontalSection: React.FC = () => {
 
   return (
     <div className="section-container overflow-x-auto">
-      <section ref={ref}>
+      <section>
         <div className="space-20vh"></div>
         <div className="racesWrapper">
           <div className="races">
             <h2
               className="pl-4"
-              style={{
-                transform: isInView ? "none" : "translateX(-200px)",
-                opacity: isInView ? 1 : 0,
-                transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
-              }}>
+            >
               #WEARE
               <span
                 style={{

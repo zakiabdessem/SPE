@@ -35,7 +35,7 @@ function StatsSection() {
         if (experience < finalValues.experience) {
           setExperience(experience + 1);
         }
-      }, 20);
+      }, 30);
 
       return () => clearInterval(interval);
     }
