@@ -2,10 +2,10 @@
 import React from "react";
 import "./navbar.scss";
 import Image from "next/image";
-import menuImage from "../public/assets/images/menu.svg";
+import menuImage from "@/public/assets/images/menu.svg";
 
 //images
-import logoImage from "../public/assets/images/spe-logo-white.png";
+import logoImage from "@/public/assets/images/spe-logo-white.png";
 
 function Navbar() {
   const handleMenuClick = () => {

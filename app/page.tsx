@@ -1,20 +1,20 @@
 "use client";
 
-import HeroSecetion from "./../component/heroSection";
-import HorizontalSection from "./../component/horizontalSection";
-import AboutSection from "@/component/aboutSection";
-import StatsSection from "@/component/statSection";
+import HeroSecetion from "../component/hero/heroSection";
+import HorizontalSection from "../component/horizontal/horizontalSection";
+import AboutSection from "@/component/about/aboutSection";
+import StatsSection from "@/component/stat/statSection";
 
-import Navbar from "@/component/navbar";
+import Navbar from "@/component/navbar/navbar";
 import useSmoothScroll from "../useSmoothScroll";
-import WhoSection from "@/component/whoSection";
-import EventSection from "@/component/eventSection";
-import Footer from "@/component/footer";
+import WhoSection from "@/component/who/whoSection";
+import EventSection from "@/component/event/eventSection";
+import Footer from "@/component/footer/footer";
 import Image from "next/image";
 
 //images
-import mouseImage from "../public/assets/images/mouse.svg";
-import arrowImage from "../public/assets/images/arrow-long.svg";
+import mouseImage from "@/public/assets/images/mouse.svg";
+import arrowImage from "@/public/assets/images/arrow-long.svg";
 
 export default function Home() {
   useSmoothScroll();

@@ -4,7 +4,7 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import "./horizontalSection.scss";
 import { useInView } from "framer-motion";
-import useScrollToTop from "../useScrollToTop";
+import useScrollToTop from "../../useScrollToTop";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -53,9 +53,7 @@ const HorizontalSection: React.FC = () => {
         <div className="space-20vh"></div>
         <div className="racesWrapper">
           <div className="races">
-            <h2
-              className="pl-4"
-            >
+            <h2 className="pl-4">
               #WEARE
               <span
                 style={{

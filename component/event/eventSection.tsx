@@ -4,11 +4,11 @@ import { useInView } from "framer-motion";
 import Image from "next/image";
 
 //images
-import o2rImage from "../public/assets/images/o2r.jpg";
-import adipecImage from "../public/assets/images/Adipec.jpg";
-import en4meImage from "../public/assets/images/energy4me.png";
-import alpImage from "../public/assets/images/alp.jpg";
-import dvLsImage from "../public/assets/images/diversity.jpg";
+import o2rImage from "@/public/assets/images/o2r.jpg";
+import adipecImage from "@/public/assets/images/Adipec.jpg";
+import en4meImage from "@/public/assets/images/energy4me.png";
+import alpImage from "@/public/assets/images/alp.jpg";
+import dvLsImage from "@/public/assets/images/diversity.jpg";
 
 function EventSection() {
   const refText = useRef(null);

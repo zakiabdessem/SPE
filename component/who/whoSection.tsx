@@ -4,7 +4,7 @@ import { useInView } from "framer-motion";
 import Image from "next/image";
 
 //images
-import oilRigImage from "../public/assets/images/oil-rig.png";
+import oilRigImage from "@/public/assets/images/oil-rig.png";
 
 interface Offer {
   title: string;

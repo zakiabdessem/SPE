@@ -1,7 +1,6 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 import "./statSection.scss";
-import "./horizontalSection.scss";
 import { useInView } from "framer-motion";
 
 function StatsSection() {

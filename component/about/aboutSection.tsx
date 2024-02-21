@@ -4,7 +4,7 @@ import { useInView } from "framer-motion";
 import Image from "next/image";
 
 //images
-import aboutImage from "../public/assets/images/about.png";
+import aboutImage from "@/public/assets/images/about.png";
 
 function AboutSection() {
   const refText = useRef(null);

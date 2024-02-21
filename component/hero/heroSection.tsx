@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import "./heroSection.scss";
 import { useInView } from "framer-motion";
-import heroImage from "../public/assets/images/Africa.png";
+import heroImage from "@/public/assets/images/Africa.png";
 
 export default function HeroSecetion() {
   const ref = useRef(null);
